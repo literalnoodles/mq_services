@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Route;
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 /*
@@ -16,3 +17,5 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('api/products', 'ProductController@index');
