@@ -18,4 +18,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('api/products', 'ProductController@index');
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->get('products', 'ProductController@index');
+    $router->post('products', 'ProductController@create');
+});

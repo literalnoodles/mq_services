@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('image');
-            $table->integer('like');
+            $table->integer('like')->nullable()->default(0);
         });
     }
 

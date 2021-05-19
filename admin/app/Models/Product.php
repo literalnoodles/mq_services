@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Product extends Model
 {
     protected $table = 'products';
     protected $fillable = [
@@ -12,4 +12,6 @@ class User extends Model
         'image',
         'like'
     ];
+
+    public $timestamps = false;
 }
